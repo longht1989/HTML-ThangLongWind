@@ -1,0 +1,20 @@
+// index page style
+.slogan {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.3em;
+    margin-bottom: 95px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after {
+        content: '';
+        display: block;
+        width: 85px;
+        height: 1px;
+        background: black;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -42px;
+    }
+}

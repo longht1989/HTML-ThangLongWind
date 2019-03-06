@@ -1,0 +1,35 @@
+/* ====================================
+   Footer's style
+   ==================================== */
+
+#site-footer {
+    @include clearfix;
+}
+
+.site-footer {
+    font-size: 16px;
+    color: #4B4B4B;
+    background-color: #F4F5F7;
+    padding: 60px 0;
+    .icon {
+        display: inline-block;
+        min-width: 20px;
+        margin-right: 10px;
+
+        &-lg {
+            font-size: 32px;
+            color: #4b4b4b;
+            margin-top: 10px;
+            min-width: 32px;
+            text-align: center;
+
+            &+.icon-lg {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+}

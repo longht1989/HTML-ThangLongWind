@@ -1,0 +1,229 @@
+/* ====================================
+   Live article 's style
+   ==================================== */
+.events {
+    margin-bottom: 10px;
+    li {
+        padding: 20px 0;
+        border-top: 1px solid #ccc;
+        .event-meta {
+            border-left: 1px solid #fff;
+            float: left;
+            time {
+                font-weight: bold;
+                vertical-align: top;
+                padding-top: 20px;
+                width: 40px;
+                display: inline-block;
+                font-size: 16px;
+            }
+            .type {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                margin-bottom: 0;
+            }
+        }
+        .event-content {
+            margin-left: 130px;
+            padding-left: 30px;
+            border-left: 1px solid #eee;
+            min-height: 65px;
+            p,
+            div {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:before,
+        &:after {
+            display: table;
+            clear: both;
+        }
+        &:after {
+            content: "";
+        }
+        &:hover {
+            .event-content {
+                border-left: 1px solid $link-hover-color;
+            }
+        }
+        &.comment .event-meta .type {
+            background: transparent url('../img/livestream/comment.png') 0 0 no-repeat;
+        }
+        &.video .event-meta .type {
+            background: transparent url('../img/livestream/video.png') 0 0 no-repeat;
+        }
+        &.picture .event-meta .type {
+            background: transparent url('../img/livestream/picture.png') 0 0 no-repeat;
+        }
+        &.soccer-goal .event-meta .type {
+            background: transparent url('../img/livestream/soccer-goal.png') 0 0 no-repeat;
+        }
+        &.soccer-fulltime .event-meta .type {
+            background: transparent url('../img/livestream/soccer-fulltime.png') 0 0 no-repeat;
+        }
+        &.soccer-start .event-meta .type {
+            background: transparent url('../img/livestream/soccer-start.png') 0 0 no-repeat;
+        }
+        &.soccer-arbiter .event-meta .type {
+            background: transparent url('../img/livestream/soccer-arbiter.png') 0 0 no-repeat;
+        }
+        &.soccer-substitute .event-meta .type {
+            background: transparent url('../img/livestream/soccer-substitute.png') 0 0 no-repeat;
+        }
+        &.soccer-yellow-card .event-meta .type {
+            background: transparent url('../img/livestream/soccer-yellow-card.png') 0 0 no-repeat;
+        }
+        &.soccer-red-card .event-meta .type {
+            background: transparent url('../img/livestream/soccer-red-card.png') 0 0 no-repeat;
+        }
+        &.soccer-penalty .event-meta .type {
+            background: transparent url('../img/livestream/soccer-penalty.png') 0 0 no-repeat;
+        }
+        &.soccer-injure .event-meta .type {
+            background: transparent url('../img/livestream/soccer-injure.png') 0 0 no-repeat;
+        }
+        &.quotation .event-meta .type {
+            background: transparent url('../img/livestream/quotation.png') 0 0 no-repeat;
+        }
+        &.soccer-fomation .event-meta .type {
+            background: transparent url('../img/livestream/soccer-fomation.png') 0 0 no-repeat;
+        }
+    }
+}
+
+// Question Answer article 
+// --------------------------------------------------
+.stream-meta {
+    margin-bottom: 20px;
+    &>div:last-child {
+        width: 70%;
+        float: right;
+        border-left: 1px solid $gray-lighter;
+        padding-left: 10px;
+        .sapo {
+            font-weight: normal;
+        }
+        .guest {
+            article {
+                margin-bottom: 15px !important;
+                figure {
+                    height: 180px;
+                }
+                header {
+                    h1 {
+                        font-weight: bold;
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    summary {
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+    .time-location {
+        padding-right: 10px;
+        width: 30%;
+        float: left;
+        div {
+            margin-bottom: 10px;
+            border-bottom: 1px solid $gray-lighter;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+            span {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 12px;
+                color: #ccc;
+                display: block;
+                margin-bottom: 5px;
+            }
+            time,
+            address {
+                font-weight: bold;
+                font-size: 14px;
+                color: $link-hover-color;
+            }
+        }
+    }
+}
+
+.timer {
+    border-top: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+    span {
+        color: $link-hover-color;
+        display: inline-block;
+        padding: 0 5px;
+    }
+}
+
+ul.stream {
+    margin-bottom: 20px;
+    li {
+        padding: 20px 0 20px 0px;
+        margin-left: 120px;
+        border-bottom: 1px solid $gray-lighter;
+        .question {
+            position: relative;
+            &>p.author {
+                font-size: 13px;
+                color: #999;
+                margin-bottom: 5px;
+                span {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #555;
+                    display: inline-block;
+                    padding: 0 5px;
+                }
+            }
+            time {
+                position: absolute;
+                right: 0;
+                font-size: 12px;
+                font-weight: bold;
+                color: $link-hover-color;
+            }
+            .mini-content {
+                font-weight: bold;
+                font-size: 15px;
+            }
+        }
+        .answer {
+            margin: 15px 0 0;
+            border-left: 1px solid $gray-lighter;
+            margin-left: 50px;
+            padding-left: 20px;
+            .author {
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+                color: $link-hover-color;
+            }
+            .mini-content {
+                .linebreak {
+                    display: table;
+                    padding-bottom: 10px;
+                    clear: both;
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

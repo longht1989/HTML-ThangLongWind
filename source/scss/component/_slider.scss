@@ -1,0 +1,60 @@
+/* Slider */
+
+.slider {
+    &-wrap {
+        position: relative;
+        text-align: center;
+        .bx-prev,
+        .bx-next {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 64px;
+            height: 64px;
+            opacity: 0.5;
+            @include transition(all, 0.2, linear);
+            &:hover {
+                opacity: 1;
+            }
+            @include breakpoint(xs) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .bx-prev {
+            background: url(../img/slider-prev.png) left top no-repeat;
+            background-size: cover;
+        }
+        .bx-next {
+            background: url(../img/slider-next.png) left top no-repeat;
+            background-size: cover;
+        }
+    }
+    &-prev,
+    &-next {
+        position: absolute;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+        @include breakpoint(xs) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &-prev {
+        left: 0;
+        transform: translate(-100%, -50%);
+        @include breakpoint(sm) {
+            transform: translate(-200%, -50%);
+        }
+    }
+    &-next {
+        right: 0;
+        transform: translate(100%, -50%);
+        @include breakpoint(sm) {
+            transform: translate(200%, -50%);
+        }
+    }
+}

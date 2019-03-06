@@ -1,0 +1,161 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    @include clearfix();
+    margin-bottom: 0px;
+}
+
+.site-header {
+    @include transition(all, 0.2, ease);
+    z-index: 10;
+
+    .logo {
+        float: left;
+        height: 60px;
+        width: auto;
+        @include transition(all, 0.2, ease);
+
+        a {
+            height: inherit;
+        }
+
+        img {
+            height: inherit;
+            width: auto;
+        }
+    }
+
+    &__topbar {
+        text-align: right;
+        padding: 16px 0;
+        border-bottom: 1px solid #E5E5E5;
+
+        @include breakpoint(xs) {
+            display: none;
+        }
+    }
+
+    &__links {
+        @include breakpoint(xs) {
+            display: none;
+        }
+
+        >a {
+            display: inline-block;
+            margin-left: 16px;
+        }
+    }
+
+    &__text {
+        margin-right: 16px;
+
+        .fa {
+            margin-right: 4px;
+        }
+    }
+
+    &__menu {
+        position: relative;
+        margin-left: 16px;
+        display: none;
+
+        .btn {
+            line-height: 30px;
+            height: 32px;
+            padding: 0 8px;
+
+            .icon-menu {
+                width: 14px;
+                height: 14px;
+                fill: #333;
+                vertical-align: middle;
+                @include transition(all, 0.2, linear);
+                position: relative;
+                top: -1px;
+                margin-right: 4px;
+            }
+
+            &.is-active,
+            &:hover {
+                background-color: $brand-primary;
+                color: white;
+                border-color: $brand-primary;
+
+                .icon-menu {
+                    fill: #333;
+                }
+            }
+        }
+
+        .site-header__content & {
+            @include breakpoint(xs) {
+                display: block;
+                float: right;
+            }
+        }
+    }
+
+    &__content {
+        padding: 20px 0;
+        @include clearfix;
+        position: relative;
+        @include transition(all, 0.2, linear);
+
+        .site-header__menu {
+            @include breakpoint(sm) {
+                display: none !important;
+            }
+        }
+    }
+
+    .menu__listing {
+        float: right;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+
+            a {
+                padding: 0 24px;
+                display: block;
+            }
+
+            &:last-child {
+                a {
+                    padding-right: 0;
+                }
+            }
+
+            &.is-active {
+                font-weight: 500;
+
+                a {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+
+    &-wrap {
+
+        /* affix */
+        &.affix {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            z-index: 100;
+            .site-header__content{
+                padding: 10px 0;
+            }
+        }
+
+        &.affix-top {}
+    }
+}
