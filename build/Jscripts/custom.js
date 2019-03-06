@@ -25,7 +25,6 @@ $(function() {
     });
     // index slider
     $('#slider-cover > ul').bxSlider({
-        auto: 1,
         pager: 1,
         nextText: '',
         prevText: '',
