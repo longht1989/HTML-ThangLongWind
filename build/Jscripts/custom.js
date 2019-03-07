@@ -42,6 +42,7 @@ $(function() {
         });
         setupChart();
         window.onscroll = function() { myScroll() };
+        // window.onscroll = function() { autoPlay() };
     }
 });
 
@@ -75,12 +76,12 @@ function setupChart() {
 }
 
 function chartIn() {
-    tm.to(chart1, 0.5, { height: '45%', ease: Power4.easeOut })
-    tm.to(chart2, 0.5, { height: '23%', ease: Power4.easeOut })
-    tm.to(chart3, 0.5, { height: '91%', ease: Power4.easeOut })
-    tm.to(chart4, 0.5, { height: '99%', ease: Power4.easeOut })
-    tm.to(chart5, 0.5, { height: '97%', ease: Power4.easeOut })
-    tm.to(chart6, 0.5, { height: '99.5%', ease: Power4.easeOut })
+    tm.to(chart1, 1.5, { height: '90%', ease: Power4.easeOut });
+    tm.to(chart2, 1.5, { height: '45%', ease: Power4.easeOut });
+    tm.to(chart3, 1.5, { height: '30%', ease: Power4.easeOut });
+    tm.to(chart4, 1.5, { height: '26%', ease: Power4.easeOut });
+    tm.to(chart5, 1.5, { height: '20%', ease: Power4.easeOut });
+    tm.to(chart6, 1.5, { height: '15%', ease: Power4.easeOut });
 }
 
 function myScroll() {
@@ -88,5 +89,13 @@ function myScroll() {
     console.log(posTop);
     if (document.body.scrollTop > (posTop - 200) || document.documentElement.scrollTop > (posTop - 200)) {
         chartIn();
+    }
+}
+
+function autoPlay() {
+    var posTopCover = $('#zone-cover').offset().top;
+    console.log(posTopCover);
+    if (document.body.scrollTop > (posTopCover) || document.documentElement.scrollTop > (posTopCover)) {
+        $('#coverVideo').get(0).play();
     }
 }
