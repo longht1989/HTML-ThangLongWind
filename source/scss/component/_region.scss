@@ -6,6 +6,7 @@
 /* zone global style */
 
 .zone {
+    padding: 32px 0;
 
     @include breakpoint(md) {
         padding: 88px 0;
@@ -55,7 +56,11 @@
     }
 
     &__icon {
-        padding: 64px 86px;
+        padding: 32px 64px;
+
+        @include breakpoint(md) {
+            padding: 64px 86px;
+        }
     }
 
     .title {
@@ -78,7 +83,11 @@
 
     .text {
         margin-bottom: 32px;
-        font-size: 20px;
+        font-size: 18px;
+
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
     }
 
     &-info {
@@ -91,6 +100,12 @@
     }
 
     .text-listing {
+        margin-top: 32px;
+
+        @include breakpoint(md) {
+            margin-top: 0;
+        }
+
         .title {
             margin-bottom: 15px;
         }
@@ -106,13 +121,17 @@
             &::before {
                 content: '';
                 display: block;
-                width: 325px;
                 height: 1px;
                 background: white;
                 position: absolute;
                 top: 13px;
                 right: 100%;
                 margin-right: 20px;
+                width: 200px;
+
+                @include breakpoint(md) {
+                    width: 325px;
+                }
             }
 
             &::after {
@@ -130,7 +149,11 @@
 
             &:nth-child(2) {
                 &::before {
-                    width: 200px;
+                    width: 170px;
+
+                    @include breakpoint(md) {
+                        width: 150px;
+                    }
                 }
             }
 
@@ -165,7 +188,7 @@
 }
 
 #zone-featured {
-    padding: 200px 0;
+    padding: 64px 0;
     position: relative;
     overflow: hidden;
 
@@ -175,14 +198,24 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../img/windmill.png') center center no-repeat;
+        background: url('../img/windmill.png') center bottom no-repeat;
         transition: all 0.5s ease-in-out;
+        background-size: 100%;
+
+        @include breakpoint(md) {
+            background-position: center center;
+            background-size: initial;
+        }
     }
 
     &:hover {
         .mask {
             transform: scale(1.05);
         }
+    }
+
+    @include breakpoint(md) {
+        padding: 200px 0;
     }
 }
 
@@ -229,22 +262,31 @@
 
         .caption {
             position: absolute;
-            bottom: -10px;
-            left: 80px;
+            bottom: -8px;
+            left: 26px;
             transform: rotate(-90deg);
             transform-origin: center left;
-            width: 200%;
-            font-size: 18px;
+            width: 600%;
             font-weight: bold;
             text-transform: uppercase;
+            font-size: 14px;
+
+            @include breakpoint(sm) {
+                left: 80px;
+                font-size: 18px;
+                width: 200%;
+            }
         }
 
         .progress {
             margin-bottom: 0;
-            margin-left: 30px;
 
             &-bar {
                 background-image: linear-gradient(-180deg, #57A773 0%, #027BD3 100%);
+            }
+
+            @include breakpoint(sm) {
+                margin-left: 30px;
             }
         }
 
@@ -253,7 +295,7 @@
     .percent {
         color: #100E0B;
         letter-spacing: -0.6px;
-        font-size: 22px;
+        font-size: 18px;
         text-align: center;
 
         @include breakpoint(sm) {

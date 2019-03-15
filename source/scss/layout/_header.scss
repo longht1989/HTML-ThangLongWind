@@ -11,7 +11,7 @@
 
     .logo {
         float: left;
-        height: 60px;
+        height: 40px;
         width: auto;
         @include transition(all, 0.2, ease);
 
@@ -20,8 +20,13 @@
         }
 
         img {
+            display: block;
             height: inherit;
             width: auto;
+        }
+
+        @include breakpoint(md) {
+            height: 60px;
         }
     }
 
@@ -57,6 +62,7 @@
     &__menu {
         position: relative;
         margin-left: 16px;
+        margin-top: 4px;
         display: none;
 
         .btn {
@@ -92,6 +98,11 @@
                 display: block;
                 float: right;
             }
+
+            @include breakpoint(sm) {
+                display: block;
+                float: right;
+            }
         }
     }
 
@@ -102,32 +113,30 @@
         @include transition(all, 0.2, linear);
 
         .site-header__menu {
-            @include breakpoint(sm) {
+            @include breakpoint(md) {
                 display: none !important;
             }
         }
     }
 
     .menu__listing {
-        float: right;
         position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
+        top: 100%;
+        background: white;
+        right: -16px;
+        left: -16px;
+        display: none;
+        z-index: 10;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
 
         li {
-            display: inline-block;
             font-size: 16px;
+            text-align: right;
 
             a {
-                padding: 0 24px;
+                padding: 10px 24px;
                 display: block;
-            }
-
-            &:last-child {
-                a {
-                    padding-right: 0;
-                }
             }
 
             &.is-active {
@@ -135,6 +144,34 @@
 
                 a {
                     color: $brand-primary;
+                }
+            }
+        }
+
+        @include breakpoint(md) {
+            display: block;
+            float: right;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            left: initial;
+            border: none;
+            background-color: transparent;
+
+            li {
+                display: inline-block;
+                text-align: left;
+
+                a {
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        @include breakpoint(lg) {
+            li {
+                a {
+                    padding: 0 24px;
                 }
             }
         }
@@ -151,7 +188,8 @@
             background: white;
             border-bottom: 1px solid #ddd;
             z-index: 100;
-            .site-header__content{
+
+            .site-header__content {
                 padding: 10px 0;
             }
         }

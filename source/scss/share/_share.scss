@@ -31,9 +31,10 @@
     &-round {
         border-radius: 50px;
         min-width: 150px;
-        line-height: 60px;
+        line-height: 40px;
 
         @include breakpoint(md) {
+            line-height: 60px;
             min-width: 290px;
         }
 
@@ -130,9 +131,14 @@
 }
 
 .progress-bar-vertical {
-    width: 34px;
+    width: 16px;
     min-height: 485px;
     display: flex;
     align-items: flex-end;
     float: left;
+
+    @include breakpoint(sm) {
+        width: 34px;
+
+    }
 }
