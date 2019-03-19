@@ -196,4 +196,74 @@
 
         &.affix-top {}
     }
+
+    .search {
+        position: relative;
+
+        &>a {
+            display: none !important;
+
+            @include breakpoint(md) {
+                display: block !important;
+            }
+        }
+
+        &-wrap {
+            width: 95%;
+            margin-left: 2.5%;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+
+            @include breakpoint(md) {
+                position: absolute;
+                right: 0;
+                top: 100%;
+                width: 30vw;
+                background: white;
+                display: none;
+                padding: 10px;
+                box-shadow: 0px 16px 64px 0px rgba(0, 0, 0, 0.5);
+            }
+
+            .form-control {
+                border-color: transparent;
+                border-bottom-color: #ddd;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                padding-left: 0;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    border-bottom-color: $brand-primary;
+                }
+            }
+        }
+
+        &-confirm {
+            position: absolute;
+            cursor: pointer;
+            right: 20px;
+            top: 0;
+            padding: 5px !important;
+
+            @include breakpoint(md) {
+                right: 0px;
+                top: 5px;
+                padding: 10px 24px !important;
+            }
+        }
+
+        @include breakpoint(md) {
+            &:hover {
+                .search-wrap {
+                    display: block;
+
+                }
+            }
+        }
+    }
 }
