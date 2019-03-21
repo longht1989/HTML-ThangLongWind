@@ -34,15 +34,8 @@ $(function() {
     });
     if ($('.site-content').hasClass('site-index')) {
         setupTextlisting();
-        $('#zone-featured').mouseover(function() {
-            textlistingIn();
-        });
-        $('#zone-featured').mouseleave(function() {
-            tm.delayedCall(1, textlistingOut);
-        });
         setupChart();
         window.onscroll = function() { myScroll() };
-        // window.onscroll = function() { autoPlay() };
     }
 });
 
@@ -76,19 +69,25 @@ function setupChart() {
 }
 
 function chartIn() {
-    tm.to(chart1, 1.5, { height: '90%', ease: Power4.easeOut });
-    tm.to(chart2, 1.5, { height: '45%', ease: Power4.easeOut });
-    tm.to(chart3, 1.5, { height: '30%', ease: Power4.easeOut });
-    tm.to(chart4, 1.5, { height: '26%', ease: Power4.easeOut });
-    tm.to(chart5, 1.5, { height: '20%', ease: Power4.easeOut });
-    tm.to(chart6, 1.5, { height: '15%', ease: Power4.easeOut });
+    tm.to(chart1, 2, { height: '90%', ease: Power2.easeInOut });
+    tm.to(chart2, 2, { height: '45%', ease: Power2.easeInOut });
+    tm.to(chart3, 2, { height: '30%', ease: Power2.easeInOut });
+    tm.to(chart4, 2, { height: '26%', ease: Power2.easeInOut });
+    tm.to(chart5, 2, { height: '20%', ease: Power2.easeInOut });
+    tm.to(chart6, 2, { height: '15%', ease: Power2.easeInOut });
 }
 
 function myScroll() {
-    var posTop = $('#zone-chart').offset().top;
-    console.log(posTop);
-    if (document.body.scrollTop > (posTop - 200) || document.documentElement.scrollTop > (posTop - 200)) {
+    var posChart = $('#zone-chart').offset().top;
+    var posFeatured = $('#zone-featured').offset().top;
+    var botFeatured = posFeatured + $('#zone-featured').outerHeight();
+    console.log(botFeatured);
+    if (document.documentElement.scrollTop > (posFeatured - 200) && document.documentElement.scrollTop < (botFeatured + 200)) {
+        textlistingIn();
+    } else if (document.documentElement.scrollTop > (posChart - 200)) {
         chartIn();
+    } else {
+        textlistingOut();
     }
 }
 
