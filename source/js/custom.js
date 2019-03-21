@@ -81,10 +81,9 @@ function myScroll() {
     var posChart = $('#zone-chart').offset().top;
     var posFeatured = $('#zone-featured').offset().top;
     var botFeatured = posFeatured + $('#zone-featured').outerHeight();
-    console.log(botFeatured);
-    if (document.documentElement.scrollTop > (posFeatured - 200) && document.documentElement.scrollTop < (botFeatured + 200)) {
+    if ((document.documentElement.scrollTop > (posFeatured - 200) && document.documentElement.scrollTop < (botFeatured + 200)) || (document.body.scrollTop > (posFeatured - 200) && document.body.scrollTop < (botFeatured + 200))) {
         textlistingIn();
-    } else if (document.documentElement.scrollTop > (posChart - 200)) {
+    } else if (document.documentElement.scrollTop > (posChart - 200) || document.body.scrollTop > (posChart - 200)) {
         chartIn();
     } else {
         textlistingOut();

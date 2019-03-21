@@ -16,11 +16,11 @@
     }
 
     &__header {
-        padding: 40px;
+        padding: 24px;
 
-        // @include breakpoint(md) {
-        //     padding: 40px 40px 0;
-        // }
+        @include breakpoint(lg) {
+            padding: 40px;
+        }
     }
 
     &__footer {
