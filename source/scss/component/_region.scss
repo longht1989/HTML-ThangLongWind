@@ -194,7 +194,7 @@
 }
 
 #zone-featured {
-    padding: 64px 0;
+    padding: 64px 0 256px;
     position: relative;
     overflow: hidden;
 
@@ -220,6 +220,9 @@
         }
     }
 
+    @include breakpoint(sm) {
+        padding: 64px 0 512px;
+    }
     @include breakpoint(md) {
         padding: 200px 0;
     }
