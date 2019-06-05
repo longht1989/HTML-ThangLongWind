@@ -37,8 +37,26 @@ $(function() {
         setupChart();
         window.onscroll = function() { myScroll() };
     }
+    // timeline page js
+    if ($('body').hasClass('page-timeline')) {
+        $('.btn-menu').on('click', menuListingClick);
+        var timelinePos = $('#home .timeline').offset().top;
+        $('#home .timeline').affix({
+            offset: timelinePos
+        })
+    }
 });
 
+function menuListingClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMenuListing();
+}
+
+function toggleMenuListing() {
+    console.log('Toggle menu__listing');
+    $('.menu__listing').toggleClass('active');
+}
 // featured animate
 function setupTextlisting() {
     tm.set(textListing1, { opacity: 0, x: 100 });
