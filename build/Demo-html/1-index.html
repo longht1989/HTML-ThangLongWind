@@ -27,28 +27,42 @@
     <header id="site-header" class="site-header-wrap">
         <div class="container site-header">
             <div class="site-header__content">
-                <h1 class="logo"><a href="1-index.html"><img src="../app_themes/img/logo.jpg" alt=""></a></h1>
+                <h1 class="logo"><a href="1-index.html"><img src="../app_themes/img/logo.svg" alt=""></a></h1>
                 <div class="site-header__menu">
                     <button class="btn btn-border btn-circle">
                         <i class="fa fa-bars"></i>
                     </button>
                 </div>
                 <ul class="menu__listing">
-                    <li class=""><a href="5-about.html">About us</a></li>
-                    <li><a href="4-partnerships.html">Partnerships</a></li>
-                    <li><a href="2-news.html">News & Events</a></li>
-                    <li><a href="#zone-chart">Data & Reports</a></li>
-                    <li><a href="6-press.html">Press</a></li>
-                    <li><a href="#site-footer">Contact</a></li>
+                    <li>
+                        <a href="/about.html">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="/partnerships.html">Đối tác</a>
+                    </li>
+                    <li>
+                        <a href="/news-events/">Tin tức &amp; sự kiện</a>
+                    </li>
+                    <li>
+                        <a href="/data-reports/">Dữ liệu &amp; Báo cáo</a>
+                    </li>
+                    <li>
+                        <a href="/press/">Báo chí</a>
+                    </li>
+                    <li>
+                        <a href="#site-footer">Liên hệ</a>
+                    </li>
                     <li><a href="tel:+84988888888"><i class="fa fa-phone"></i></a></li>
                     <li class="search">
-                        <a><i class="fa fa-search"></i></a>
+                        <a href="#search-query"><i class="fa fa-search"></i></a>
                         <div class="search-wrap">
-                            <input type="text" class="form-control" placeholder="Search anything ...">
-                            <a class="search-confirm"><i class="fa fa-search"></i></a>
+                            <input type="text" class="form-control search-query" placeholder="Tìm kiếm" id="search-query">
+                            <span class="search-confirm"><i class="fa fa-search search-button" id="search-button"></i></span>
                         </div>
                     </li>
-                    <li><a href=""><img src="../app_themes/img/flag-vie.png" alt=""></a></li>
+                    <li><a href="http://en.thanglongwind.com" title="English version">
+                            <img src="http://img.thanglongwind.com/webthemes/img/flag-eng.jpg" alt="English version" title="English version" width="27"></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -71,7 +85,7 @@
                 </div>
                 <div class="zone__content">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="text-center zone__icon">
                                 <img src="../app_themes/img/wind.png" alt="" class="center-block img-responsive">
                             </div>
@@ -91,30 +105,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <h2 class="title">Why do we need offshore wind?</h2>
-                        <p class="text">Offshore wind is a clean, safe, reliable way to power our homes, schools, and
-                            businesses. </p>
+                        <h2 class="title">Tại sao chúng ta cần điện gió ngoài khơi</h2>
+                        <p class="text">Điện gió ngoài khơi là nguồn năng lượng sạch, an toàn và đáng tin cậy để cung cấp cho gia đình, trường học và doanh nghiệp.</p>
                         <div class="">
                             <a href="#" class="btn btn-primary btn-round">Explore All</a>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-offset-4 col-md-2">
+                    <div class="col-xs-12 col-md-offset-3 col-md-3">
                         <ul class="text-listing">
                             <li id="textListing1">
-                                <h4 class="title">What are the benefits of offshore wind?</h4>
-                                <p class="text">Offshore wind produces no air or water pollution as it generates electricity. Coal
-                                    plants, by contrast, pollute our air with soot and smog that cause or worsen
-                                    respiratory illnesses, heart disease, and asthma.</p>
+                                <h4 class="title">Những lợi ích từ điện gió ngoài khơi là gì?</h4>
+                                <p class="text">Điện gió ngoài khơi không tạo ra ô nhiễm không khí hoặc nước. Ngược lại, các nhà máy than làm ô nhiễm không khí với bồ hóng và khói bụi gây ra hoặc làm nặng thêm các bệnh về đường hô hấp, bệnh tim và hen suyễn.</p>
                             </li>
                             <li id="textListing2">
-                                <h4 class="title">How does offshore wind compare to coal?</h4>
-                                <p class="text">The cost of coal is rising, while the cost of renewables like wind is dropping every
-                                    year.</p>
+                                <h4 class="title">So sánh giữa năng lượng từ gió ngoài khơi và than</h4>
+                                <p class="text">Chi phí than đang tăng lên, trong khi chi phí tái tạo như gió đang giảm dần.</p>
                             </li>
                             <li id="textListing3">
-                                <h4 class="title">Is there proof that offshore wind works?</h4>
-                                <p class="text">Europe has been harnessing the power of offshore wind for twenty years and is a
-                                    leader in offshore wind energy.</p>
+                                <h4 class="title">Điện gió ngoài khơi đã và đang hoạt động ở đâu?</h4>
+                                <p class="text">Châu Âu đã và đang khai thác nguồn năng lượng từ gió ngoài khơi trong hai mươi năm qua và là nơi dẫn đầu về năng lượng gió ngoài khơi.</p>
                             </li>
                         </ul>
                     </div>
@@ -126,7 +135,7 @@
             <div class="container">
                 <div class="zone__content">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="text-center zone__icon">
                                 <img src="../app_themes/img/wind.png" alt="" class="center-block img-responsive">
                             </div>
@@ -140,7 +149,7 @@
                         <div class="col-xs-12">
                             <div class="videoWrapper">
                                 <div id="videoContainer">
-                                    <video id="mainVideo" playsinline controls>
+                                    <video id="mainVideo" playsinline controls poster="images/poster1.png">
                                         <source src="videos/video.mp4" type="video/mp4" />
                                     </video>
                                 </div>
@@ -582,46 +591,46 @@
                 </div>
                 <div class="zone__content">
                     <div class="storyListing">
-                        <div class="story story--mask">
+                        <a href="3-articleDetail.html" class="story story--mask">
                             <div class="story__thumb">
                                 <img src="images/pic3.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="story__header">
-                                <h2 class="story__title"><a href="#">Ra mắt dự án</a></h2>
+                                <h2 class="story__title">Hội thảo: Điện gió ngoài khơi Kê Gà - đột phá mới cho kinh tế Việt Nam</h2>
                                 <p class="story__meta">Hà Nội, 17 Apr 2018</p>
-                                <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p>
+                                <!-- <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p> -->
                             </div>
-                        </div>
-                        <div class="story story--mask story--mask--lg">
+                        </a>
+                        <a href="3-articleDetail.html" class="story story--mask story--mask--lg">
                             <div class="story__thumb">
                                 <img src="images/pic1.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="story__header">
-                                <h2 class="story__title"><a href="#">Ra mắt dự án</a></h2>
+                                <h2 class="story__title">Vương quốc Anh cam kết hỗ trợ Việt Nam phát triển năng lượng tái tạo</h2>
                                 <p class="story__meta">Hà Nội, 17 Apr 2018</p>
-                                <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p>
+                                <!-- <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p> -->
                             </div>
-                        </div>
-                        <div class="story story--mask story--mask--lg">
+                        </a>
+                        <a href="3-articleDetail.html" class="story story--mask story--mask--lg">
                             <div class="story__thumb">
                                 <img src="images/pic2.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="story__header">
-                                <h2 class="story__title"><a href="#">Ra mắt dự án</a></h2>
+                                <h2 class="story__title">“Khu vực điện gió Kê Gà sẽ đưa Việt Nam lên vị thế đi đầu với nền kinh tế không khí thải”</h2>
                                 <p class="story__meta">Hà Nội, 17 Apr 2018</p>
-                                <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p>
+                                <!-- <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p> -->
                             </div>
-                        </div>
-                        <div class="story story--mask">
+                        </a>
+                        <a href="3-articleDetail.html" class="story story--mask">
                             <div class="story__thumb">
                                 <img src="images/pic4.jpg" class="img-responsive" alt="">
                             </div>
                             <div class="story__header">
-                                <h2 class="story__title"><a href="#">Ra mắt dự án</a></h2>
+                                <h2 class="story__title">Khảo sát làm dự án điện gió “khủng” ở vùng biển Kê Gà</h2>
                                 <p class="story__meta">Hà Nội, 17 Apr 2018</p>
-                                <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p>
+                                <!-- <p class="story__desc">Dự án được đầu tư bởi nhà đầu tư Enterprize Energy Pte. Ltd (EE) cùng nhiều đơn vị đối tác đối ...</p> -->
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -666,14 +675,13 @@
                             <div class="col-xs-12 col-sm-6">
                                 <h4>Get In Touch</h4>
                                 <br>
+                                <p><span class="fa fa-map-marker icon"></span><br>Tầng 2, 69 Quán Thánh, quận Ba Đình, Hà Nội</p>
                                 <br>
-                                <p><span class="fa fa-map-marker icon"></span> 51 Le Dai Hanh, Hai Ba Trung Dist, Ha Noi</p>
+                                <p><span class="fa fa-envelope icon"></span><br> contact@thanglongwind.com</p>
                                 <br>
-                                <p><span class="fa fa-envelope icon"></span> contact@thanglongwind.com</p>
-                                <br>
-                                <p><span class="fa fa-phone icon"></span> 793-891-7938</p>
-                                <p><span class="icon"></span> 512-915-5628</p>
-                                <p><span class="icon"></span> 952-775-6021</p>
+                                <p><span class="fa fa-phone icon"></span><br> 793-891-7938</p>
+                                <p>512-915-5628</p>
+                                <p>952-775-6021</p>
                                 <div class="visible-xs"><br>
                                     <hr><br></div>
                             </div>

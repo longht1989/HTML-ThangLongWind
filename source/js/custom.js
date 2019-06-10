@@ -23,6 +23,11 @@ $(function() {
         $(".menu__listing").slideToggle('fast');
         $(".menu__listing").toggleClass('m-show');
     });
+    // toggle search input
+    $('#site-header .fa-search').click(function() {
+        $(this).toggleClass('fa-times');
+        $('.search-wrap').toggleClass('active');
+    });
     // index slider
     $('#slider-cover > ul').bxSlider({
         pager: 1,

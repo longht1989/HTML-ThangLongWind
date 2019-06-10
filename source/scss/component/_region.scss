@@ -136,7 +136,7 @@
                 width: 200px;
 
                 @include breakpoint(md) {
-                    width: 325px;
+                    width: 215px;
                 }
             }
 
@@ -158,7 +158,7 @@
                     width: 170px;
 
                     @include breakpoint(md) {
-                        width: 150px;
+                        width: 110px;
                     }
                 }
             }
@@ -221,10 +221,10 @@
     }
 
     @include breakpoint(sm) {
-        padding: 64px 0 512px;
+        padding: 64px 0 640px;
     }
     @include breakpoint(md) {
-        padding: 200px 0;
+        padding: 124px 0;
     }
 }
 

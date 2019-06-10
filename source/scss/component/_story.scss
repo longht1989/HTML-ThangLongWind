@@ -206,9 +206,10 @@
         border-radius: 0;
         position: relative;
         margin-bottom: 1px;
+        display: block;
 
         .story__header {
-            padding: 40px;
+            padding: 24px;
             position: absolute;
             left: 0;
             right: 0;
@@ -220,11 +221,24 @@
             a {
                 color: white;
             }
+
+            @include breakpoint(sm) {
+                padding: 40px;
+            }
         }
 
         .story__title {
-            font-size: 32px;
             font-weight: normal;
+            font-size: 24px;
+
+            &:hover {
+                a {
+                    display: block;
+                    text-decoration: underline;
+                }
+            }
+
+            @include breakpoint(sm) {}
         }
 
         .story__meta,
@@ -250,6 +264,9 @@
         }
 
         .story__thumb {
+            a {
+                display: block;
+            }
 
             &::after {
                 content: '';
@@ -270,7 +287,7 @@
 
             .story__thumb {
                 &::after {
-                    background: rgba(75, 75, 75, 0.4);
+                    background: rgba(0, 0, 0, 0.5);
                 }
             }
 
@@ -279,13 +296,25 @@
             }
         }
 
+        &--lg {
+
+            .story__title {
+                font-size: 18px;
+            }
+        }
+
         @include breakpoint(sm) {
             width: 33.33%;
+
             &--lg {
                 width: calc(66.66% - 1px);
 
                 .story__header {
                     left: 50%;
+                }
+
+                .story__title {
+                    font-size: 24px;
                 }
             }
 
@@ -316,6 +345,7 @@
             padding: 0;
             overflow: hidden;
         }
+
     }
 
     &--normal {
@@ -475,6 +505,7 @@
         @include breakpoint(sm) {
             width: 512px;
         }
+
         @include breakpoint(md) {
             left: 60%;
             top: -20%;

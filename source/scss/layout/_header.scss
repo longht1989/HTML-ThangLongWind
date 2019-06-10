@@ -68,7 +68,7 @@
         .btn {
             line-height: 30px;
             height: 32px;
-            padding: 0 8px;
+            padding: 0 6px;
 
             .icon-menu {
                 width: 14px;
@@ -208,19 +208,34 @@
             }
         }
 
+        .fa {
+            min-width: 16px;
+            text-align: center;
+        }
+
+        .fa-times {
+            color: $brand-warning;
+        }
+
         &-wrap {
-            width: 95%;
-            margin-left: 2.5%;
+            width: 60%;
+            margin-left: 40%;
+            padding-right: 24px;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
             border-radius: 5px;
 
+            @include breakpoint(sm) {
+                width: 40%;
+                margin-left: 60%;
+            }
+
             @include breakpoint(md) {
                 position: absolute;
                 right: 0;
-                top: 100%;
+                top: 150%;
                 width: 30vw;
                 background: white;
                 display: none;
@@ -230,16 +245,19 @@
 
             .form-control {
                 border-color: transparent;
-                border-bottom-color: #ddd;
+                border-bottom: 1px solid #eee;
                 -webkit-box-shadow: none;
                 box-shadow: none;
                 padding-left: 0;
 
-                &:hover,
-                &:active,
-                &:focus {
-                    border-bottom-color: $brand-primary;
+                @include breakpoint(md) {
+                    border-color: transparent;
                 }
+
+            }
+
+            &.active {
+                display: block;
             }
         }
 
@@ -253,17 +271,16 @@
             @include breakpoint(md) {
                 right: 0px;
                 top: 5px;
-                padding: 10px 24px !important;
+                padding: 10px 14px !important;
             }
         }
 
         @include breakpoint(md) {
-            &:hover {
-                .search-wrap {
-                    display: block;
-
-                }
-            }
+            // &:hover {
+            //     .search-wrap {
+            //         display: block;
+            //     }
+            // }
         }
     }
 }
