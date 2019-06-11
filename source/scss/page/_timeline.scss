@@ -163,6 +163,12 @@
                 margin: auto;
             }
         }
+
+        @include breakpoint(sm) {
+            .img-responsive {
+                margin: auto;
+            }
+        }
     }
 }
 
@@ -467,6 +473,10 @@
         width: 200px;
         margin: auto auto 30px;
         left: -10%;
+
+        &:nth-child(2n) {
+            left: 2%;
+        }
     }
 
     .content-articles .event:nth-child(4n+2) .content-slideshow,
