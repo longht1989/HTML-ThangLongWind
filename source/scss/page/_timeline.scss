@@ -156,6 +156,14 @@
     .title {
         letter-spacing: -1px;
     }
+
+    .zone__icon {
+        @include breakpoint(xs) {
+            .img-responsive {
+                margin: auto;
+            }
+        }
+    }
 }
 
 .content-articles {
@@ -190,7 +198,7 @@
 
 .event {
     min-width: 176px;
-    margin-right: 2.5%;
+    margin-right: 30px;
     transition: all 0.2s ease-in-out;
     position: relative;
 
@@ -204,11 +212,12 @@
         }
 
         h2 {
-            font-weight: bold;
-            font-size: 40px;
+            font-weight: 700;
+            font-size: 24px;
             color: white;
             letter-spacing: -1px;
             text-align: right;
+            margin-bottom: 5px;
         }
 
         &-text {
@@ -237,7 +246,7 @@
     }
 
     &:last-child {
-        margin-right: calc(50vw - 239px);
+        // margin-right: calc(50vw - 239px);
         box-sizing: content-box;
     }
 }
@@ -286,7 +295,7 @@
 .timeline hr.jaune {
     position: absolute;
     background-color: #F08B15;
-    width: 14.2857%;
+    width: 5%;
     max-width: 110%;
     bottom: 0;
     left: 0;

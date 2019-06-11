@@ -75,10 +75,6 @@
         @include breakpoint(md) {
             font-size: 54px;
         }
-
-        @include breakpoint(lg) {
-            font-size: 72px;
-        }
     }
 
     .text {
@@ -204,7 +200,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('../img/windmill.png') center bottom no-repeat;
+        background: url('../img/windmill.png?v=1') center bottom no-repeat;
         transition: all 0.5s ease-in-out;
         background-size: 100%;
 

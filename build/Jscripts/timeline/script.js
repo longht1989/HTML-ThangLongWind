@@ -7,14 +7,14 @@ $(document).ready(function() {
     $(".wrap").on("scroll", function(event) {
         for (var loop = 0; loop < nbPosts + 1; loop++) {
             if (window.matchMedia("(min-width: 1601px)").matches) {
-                var width = 219 * loop;
-                var topPost = width - 219
+                var width = 173 * loop;
+                var topPost = width - 173
             } else {
-                var width = 168 * loop;
-                var topPost = width - 168
+                var width = 173 * loop;
+                var topPost = width - 173
             }
 
-            var divis = 100 / 6;
+            var divis = 100 / 20;
             var timelapse = divis * loop;
             var timeline = timelapse + divis;
             var loopDate = loop + 1;
@@ -68,7 +68,7 @@ $(document).ready(function() {
         for (var loop = 0; loop < nbPosts + 1; loop++) {
             var width = 300 * loop;
             var topPost = width - 300;
-            var divis = 100 / 6;
+            var divis = 100 / 20;
             var timelapse = divis * loop;
             var timeline = timelapse + divis;
             var loopDate = loop + 1;
