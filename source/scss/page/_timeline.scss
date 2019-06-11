@@ -158,15 +158,13 @@
     }
 
     .zone__icon {
-        @include breakpoint(xs) {
-            .img-responsive {
-                margin: auto;
-            }
+        .img-responsive {
+            margin: auto;
         }
 
-        @include breakpoint(sm) {
+        @include breakpoint(md) {
             .img-responsive {
-                margin: auto;
+                margin: initial;
             }
         }
     }
