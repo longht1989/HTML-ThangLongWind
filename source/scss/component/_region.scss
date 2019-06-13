@@ -216,9 +216,14 @@
         }
     }
 
+    @include breakpoint(414px) {
+        padding-bottom: 312px;
+    }
+
     @include breakpoint(sm) {
         padding: 64px 0 640px;
     }
+
     @include breakpoint(md) {
         padding: 124px 0;
     }
