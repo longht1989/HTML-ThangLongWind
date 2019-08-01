@@ -91,6 +91,28 @@
                     fill: #333;
                 }
             }
+
+            &-flag {
+                margin-right: 12px;
+                position: relative;
+                overflow: hidden;
+                border: none;
+                width: 32px;
+
+                a {
+                    display: block;
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                        width: auto;
+                        max-width: initial;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
         }
 
         .site-header__content & {

@@ -49,6 +49,22 @@
             bottom: -20px;
             left: 0;
         }
+
+        &--sm {
+            font-size: 16px;
+
+            @include breakpoint(sm) {
+                font-size: 18px;
+            }
+
+            @include breakpoint(md) {
+                font-size: 24px;
+            }
+
+            @include breakpoint(lg) {
+                font-size: 32px;
+            }
+        }
     }
 
     &__content {
