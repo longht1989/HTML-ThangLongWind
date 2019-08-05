@@ -168,6 +168,11 @@
                     color: $brand-primary;
                 }
             }
+
+            img {
+                max-width: 27px;
+                height: auto;
+            }
         }
 
         @include breakpoint(md) {

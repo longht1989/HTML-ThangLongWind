@@ -29,11 +29,10 @@
             <div class="site-header__content">
                 <h1 class="logo"><a href="1-index.html"><img src="../app_themes/img/logo.svg" alt=""></a></h1>
                 <div class="site-header__menu">
-                <button class="btn btn-border btn-flag">
+                    <button class="btn btn-border btn-flag">
                         <a href="http://en.thanglongwind.com" title="English version">
                             <!-- <img src="http://img.thanglongwind.com/webthemes/img/flag-eng.jpg" alt="English version" title="English version" width="27"></a> -->
-                            <img src="../app_themes/img/flag-vie.png" alt="English version" title="English version" width="27"></a>
-                            
+                            <img src="../app_themes/img/flag-vi.png" alt="English version" title="English version" width="27"></a>
                     </button>
                     <button class="btn btn-border btn-circle">
                         <i class="fa fa-bars"></i>
@@ -67,7 +66,7 @@
                         </div>
                     </li>
                     <li><a href="http://en.thanglongwind.com" title="English version">
-                            <img src="http://img.thanglongwind.com/webthemes/img/flag-eng.jpg" alt="English version" title="English version" width="27"></a>
+                            <img src="http://img.thanglongwind.com/webthemes/img/flag-vi.png" alt="English version" title="English version"></a>
                     </li>
                 </ul>
             </div>
@@ -650,51 +649,103 @@
             </div>
             <div class="zone__content">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 col-md-push-6">
+                    <div class="col-xs-12 col-md-5 col-md-push-7 col-lg-3 col-lg-push-9">
                         <div class="form-wrap">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 ">
-                                    <h3>Name</h3>
-                                    <br>
-                                    <input type="text" class="form-control">
-                                    <div class="visible-xs"><br></div>
+                            <div id="contactForm">
+                                <div class="row">
+                                    <div class="col-xs-12 ">
+                                        <h3>Your Name</h3>
+                                        <br>
+                                        <input name="ctl00$Footer1$Contact1$txtName" type="text" id="ctl00_Footer1_Contact1_txtName" class="form-control" placeholder="Your Name">
+                                        <br>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <h3>Email</h3>
+                                        <br>
+                                        <input name="ctl00$Footer1$Contact1$txtEmail" type="text" id="ctl00_Footer1_Contact1_txtEmail" class="form-control" placeholder="Email">
+                                    </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3>Email</h3>
-                                    <br>
-                                    <input type="text" class="form-control">
+                                <br>
+                                <h3>Message</h3>
+                                <br>
+                                <textarea name="ctl00$Footer1$Contact1$txtBody" rows="5" cols="20" id="ctl00_Footer1_Contact1_txtBody" class="form-control"></textarea>
+                                <br>
+                                <div class="text-right">
+                                    <input name="ctl00$Footer1$Contact1$txtSecurityCode" type="text" id="ctl00_Footer1_Contact1_txtSecurityCode" class="form-control secuCode">
+                                    <div style="float: left; margin-top: 0px;">
+                                        <span id="ctl00_Footer1_Contact1_FormShield" style="display:inline-block;">
+                                            <table border="0" cellpadding="2" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img id="FormShield_Image" src="UserControls/Home/FormShieldHttpHandler.aspx?__formShieldID=FormShield&amp;generate=image&amp;properties=5FF87CD0CF2F8F9F0E826DA4DC9EFAFC2A7DB758CEA866E83507C6853A0E5456" alt="Protected by FormShield" title="Protected by FormShield" height="34" width="158"></td>
+                                                        <td>
+                                                            <table border="0" cellpadding="1" cellspacing="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><img id="FormShield_RefreshIcon" src="/WebResource.axd?d=zZC36m2n3GyCtwfdl4uEEdiJP55Q5PMrvEG_Gs7RhSSP6Xm0-c-P2VnJ7UIf9v49O8j7NOsO2AN0lLWtkaKvPRcOpdfMt-2r7p70PG4EwtQcn45YCb5pPGCsHiSkaw7C9jHd63XYAZeMfIwSC2E0ZF5jIKRN3e7CzBJ4lgevRxk1&amp;t=635857747682520000" alt="Refresh" title="Refresh" onclick="__doPostBack('ctl00$Footer1$Contact1$FormShield','RefreshIconClick')" style="cursor:pointer;" height="24" width="24"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </span>
+                                    </div>
+                                    <input type="submit" name="ctl00$Footer1$Contact1$btnSend" value="Send" onclick="return CheckFormInfo();" id="ctl00_Footer1_Contact1_btnSend" class="btn btn-primary btn-round btn-sm">
                                 </div>
-                            </div>
-                            <br><br>
-                            <h3>Message</h3>
-                            <br>
-                            <textarea class="form-control" rows="5"></textarea>
-                            <br>
-                            <div class="text-right">
-                                <a class="btn btn-primary btn-round btn-sm">Submit</a>
                             </div>
                         </div>
-                        <div class="visible-xs visible-sm"><br><br></div>
+                        <div class="visible-xs visible-sm">
+                            <br>
+                            <br>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-pull-6 col-md-6">
+                    <div class="col-xs-12 col-md-7 col-md-pull-5 col-lg-pull-3 col-lg-9">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-lg-8">
                                 <h4>Get In Touch</h4>
                                 <br>
-                                <p><span class="fa fa-map-marker icon"></span><br>Tầng 2, 69 Quán Thánh, quận Ba Đình, Hà Nội</p>
+                                <p>
+                                    <span class="fa fa-map-marker icon"></span>
+                                    <br>
+                                    <strong>Headquater:</strong>
+                                    <br>
+                                    <a href="https://enterprizeenergy.com/">Enterprize Energy PTE. Ltd</a>
+                                    <br>
+                                    1, Kaki Bukit Road 1, 02 - 44, Enterprize One, Singapore 415934.
+                                    <br>
+                                    <br>
+                                    <strong>Office:</strong>
+                                    <br>
+                                    UK: 5 Harley Place, Marylebone, LonDon W1G 8QD
+                                    <br>
+                                    Taiwan: 7F-B., No. 167, Tun Hua N.Rd., Songshan Dist., Taipei City 10549, Taiwan (R.O.C.)
+                                    <br>
+                                    VietNam: 1313, 13F Hanoi Tower, 49 Hai Ba Trung Street, Hoan Kiem District Hanoi
+                                </p>
                                 <br>
-                                <p><span class="fa fa-envelope icon"></span><br> contact@thanglongwind.com</p>
-                                <br>
-                                <p><span class="fa fa-phone icon"></span><br> 793-891-7938</p>
-                                <p>512-915-5628</p>
-                                <p>952-775-6021</p>
-                                <div class="visible-xs"><br>
-                                    <hr><br></div>
+                                <p>
+                                    <span class="fa fa-envelope icon"></span>
+                                    <br>
+                                    contact@thanglongwind.com
+                                </p>
+                                <hr>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-lg-4">
                                 <h4>Credits</h4>
                                 <br>
-                                <p>@ 2019 Thang Long Windmills. Developed by Hemera Media for Enterprize Energy Pte. Ltd 51 Le Dai Hanh, Hai Ba Trung Dist, Ha Noi</p>
+                                <p><strong>© Copyright by <a href="https://enterprizeenergy.com/">Enterprize Energy</a></strong>
+                                    <br>
+                                    Developed by <a href="https://hemera.vn/">Hemera Media</a>
+                                    <br>
+                                    Email: contact@hemera.vn</p>
                                 <br>
                                 <br>
                                 <h4>Follow</h4>
