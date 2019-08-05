@@ -11,6 +11,13 @@
     color: #4B4B4B;
     background-color: #F4F5F7;
     padding: 60px 0;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .icon {
         display: inline-block;
         min-width: 20px;
@@ -24,12 +31,40 @@
             text-align: center;
 
             &+.icon-lg {
-                margin-left: 10px;
+                margin-left: 16px;
             }
 
             &:hover {
                 color: $brand-primary;
+                text-decoration: none;
             }
+        }
+    }
+
+    h4,
+    h5 {
+        color: #222;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    ul {
+
+        li {
+            &+li {
+                margin-top: 4px;
+            }
+        }
+
+        &+p,
+        &+ul {
+            margin-top: 24px;
         }
     }
 }
