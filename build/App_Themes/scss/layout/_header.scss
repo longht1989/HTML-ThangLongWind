@@ -1,0 +1,15 @@
+.site-header {
+    .menu__listing {
+        li {
+            @include respond-above(md) {
+                font-size: 14px;
+            }
+
+            @include respond-above(xxxl) {
+                font-size: 16px;
+            }
+
+            a {}
+        }
+    }
+}
