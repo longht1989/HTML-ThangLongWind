@@ -50,6 +50,14 @@ $(function() {
             offset: timelinePos
         })
     }
+
+    // closepopup
+    $('.modal .fa-times').click(function() {
+        closePopup();
+    });
+    $('.popup .mask').click(function() {
+        closePopup();
+    });
 });
 
 function menuListingClick(e) {
@@ -119,4 +127,9 @@ function autoPlay() {
     if (document.body.scrollTop > (posTopCover) || document.documentElement.scrollTop > (posTopCover)) {
         $('#coverVideo').get(0).play();
     }
+}
+
+function closePopup() {
+    $('body').removeClass('has-popup');
+    $('.popup').hide();
 }

@@ -1,0 +1,43 @@
+body {
+    &.has-popup {
+        overflow: hidden;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(black, 0.4);
+    }
+
+    .modal {
+        position: absolute;
+        width: 800px;
+        max-width: 90%;
+        max-height: 80vh;
+        background-color: #fff;
+        padding: 1rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        &-header {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .qc {
+        margin: 0;
+    }
+}
